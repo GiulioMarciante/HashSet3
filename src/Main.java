@@ -10,7 +10,9 @@ public class Main {
     public static void main(String[] args) {
         Number num = new Number(4);
 
-        Set<Integer> numbers = makeHashSet(num);
+        Set<Integer> numbers = makeHashSet();
+
+        numbers.add(num.number);
 
         System.out.println("The set with the object created is: \n" + numbers);
 
@@ -18,11 +20,11 @@ public class Main {
 
         while(iterator.hasNext()){
             Integer number = iterator.next();
+
             if(number == 4){
                 iterator.remove();
                 System.out.println("The number equal to the object created is:\n" + number);
             }
-
         }
         System.out.println("The set without the objected created is: \n" + numbers);
 
@@ -30,11 +32,8 @@ public class Main {
 
         System.out.println("The set cleared is: \n" + numbers);
     }
-    public static Set<Integer> makeHashSet(Number num){
-        Set<Integer> hashSetNumbers = new HashSet<Integer>(Arrays.asList(1,2,3));
+    public static Set<Integer> makeHashSet(){
 
-        hashSetNumbers.add(num.number);
-
-        return hashSetNumbers;
+        return new HashSet<>(Arrays.asList(1,2,3));
     }
 }
