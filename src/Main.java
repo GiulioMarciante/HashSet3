@@ -28,7 +28,7 @@ public class Main {
 
         numbers.clear();
 
-        System.out.println("The set cleared: \n" + numbers);
+        System.out.println("The set cleared is: \n" + numbers);
     }
     public static Set<Integer> makeHashSet(Number num){
         Set<Integer> hashSetNumbers = new HashSet<Integer>(Arrays.asList(1,2,3));
